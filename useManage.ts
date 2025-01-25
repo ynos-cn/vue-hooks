@@ -54,7 +54,7 @@ export const useManage = (doQuery?: Function) => {
   /** 
    * 操作方法
    */
-  const operateFn = (record: any, cmd: OperateCMD) => {
+  const operateFn = (record: any, cmd: OperateCMD = OperateCMD.new) => {
     visible.value = true
     command.value = cmd
     formData.value = record ?? {}
@@ -119,6 +119,7 @@ export const useManage = (doQuery?: Function) => {
     sorter,
     setPage,
     router,
-    route
+    route,
+    OperateCMD
   }
 }
